@@ -113,8 +113,9 @@ gsap.ticker.add(() => {
     ctx.clearRect(0, 0, cw, ch);
     //console.log(bubbles);
     bubbles.forEach((b) => {
+      
         ctx.fillStyle = "#fff";
-        ctx.fillText("Alex Paliskis", b.x+20, b.y+50);
+        ctx.fillText("Alex Paliskis", b.x + 20, b.y + 50);
         ctx.translate(b.x + b.scaleX * 75, b.y + b.scaleY * 75);
         ctx.rotate(b.rotate);
         ctx.drawImage(
@@ -137,3 +138,7 @@ window.onresize = () => {
     cw = c.width = innerWidth;
     ch = c.height = innerHeight;
 };
+
+function kill(e) {
+    console.log(e);
+}
